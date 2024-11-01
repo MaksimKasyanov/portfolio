@@ -1,0 +1,58 @@
+:root {
+  --d-border-radius-0:            0;
+  --d-border-radius-1:            var(--size-4);
+  --d-border-radius-2:            var(--size-8);
+  --d-border-radius-3:            var(--size-10);
+  --d-border-radius-4:            var(--size-12);
+  --d-border-radius-5:            var(--size-16);
+  --d-border-radius-6:            var(--size-20);
+  --d-border-radius-7:            var(--size-24);
+  --d-border-radius-8:            var(--size-30);
+  --d-border-radius-full:         625rem;
+
+  --d-border-primary:             var(--size-1) solid   var(--d-color-orange-400);
+  --d-border-primary-focused:     var(--size-1) solid   var(--d-color-orange-300);
+  --d-border-primary-active:      var(--size-1) solid   var(--d-color-orange-000);
+  --d-border-primary-hover:       var(--size-1) solid   var(--d-color-orange-300);
+  --d-border-primary-dis:         var(--size-1) solid   var(--d-color-orange-200);
+  --d-border-primary-dash:        var(--size-1) dashed  var(--d-color-orange-400);
+  --d-border-primary-dash-h:      var(--size-1) dashed  var(--d-color-orange-300);
+  --d-border-primary-dash-d:      var(--size-1) dashed  var(--d-color-orange-200);
+  --d-border-primary-hdn:         var(--size-1) solid   var(--d-color-orange-000);
+  --d-border-primary-none:        var(--size-0) solid   var(--d-color-orange-000);
+
+  --d-border-danger:              var(--size-1) solid   var(--d-color-red-400);
+  --d-border-danger-focused:      var(--size-1) solid   var(--d-color-red-200);
+  --d-border-danger-active:       var(--size-1) solid   var(--d-color-red-000);
+  --d-border-danger-hover:        var(--size-1) solid   var(--d-color-red-300);
+  --d-border-danger-dis:          var(--size-1) solid   var(--d-color-red-200);
+  --d-border-danger-dash:         var(--size-1) dashed  var(--d-color-red-400);
+  --d-border-danger-dash-h:       var(--size-1) dashed  var(--d-color-red-300);
+  --d-border-danger-dash-d:       var(--size-1) dashed  var(--d-color-red-200);
+  --d-border-danger-hdn:          var(--size-1) solid   var(--d-color-red-000);
+  --d-border-danger-none:         var(--size-0) solid   var(--d-color-red-000);
+
+  --d-border-success:              var(--size-1) solid   var(--d-color-green-500);
+  --d-border-success-focused:      var(--size-1) solid   var(--d-color-green-400);
+  --d-border-success-active:       var(--size-1) solid   var(--d-color-green-000);
+  --d-border-success-hover:        var(--size-1) solid   var(--d-color-green-400);
+  --d-border-success-dis:          var(--size-1) solid   var(--d-color-green-200);
+  --d-border-success-dash:         var(--size-1) dashed  var(--d-color-green-400);
+  --d-border-success-dash-h:       var(--size-1) dashed  var(--d-color-green-300);
+  --d-border-success-dash-d:       var(--size-1) dashed  var(--d-color-green-200);
+  --d-border-success-hdn:          var(--size-1) solid   var(--d-color-green-000);
+  --d-border-success-none:         var(--size-0) solid   var(--d-color-green-000);
+
+  --d-border-secondary-black:      var(--size-1) solid   var(--d-color-neutral-600);
+  --d-border-secondary:            var(--size-1) solid   var(--d-color-neutral-400);
+  --d-border-secondary-focused:    var(--size-1) solid   var(--d-color-neutral-300);
+  --d-border-secondary-active:     var(--size-1) solid   var(--d-color-neutral-300);
+  --d-border-secondary-hover:      var(--size-1) solid   var(--d-color-neutral-300);
+  --d-border-secondary-dis:        var(--size-1) solid   var(--d-color-neutral-100);
+  --d-border-secondary-dash:       var(--size-1) dashed  var(--d-color-neutral-300);
+  --d-border-secondary-dash-h:     var(--size-1) dashed  var(--d-color-neutral-200);
+  --d-border-secondary-dash-d:     var(--size-1) dashed  var(--d-color-neutral-100);
+  --d-border-secondary-hdn:        var(--size-1) solid   var(--d-color-neutral-000);
+  --d-border-secondary-none:       var(--size-0) solid   var(--d-color-neutral-000);
+}
+

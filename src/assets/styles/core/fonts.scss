@@ -1,0 +1,13 @@
+:root{
+  --d-font-primary:      Helvetica Neue;  --d-font-family-sans: -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica Neue, sans-serif;
+
+  --d-font-size-900:     var(--size-40);   /*   2.75 rem   */  --d-line-height-900:   var(--size-48);   /*   3.375 rem  */
+  --d-font-size-800:     var(--size-32);   /*   2 rem      */  --d-line-height-800:   var(--size-40);   /*   2.5 rem    */
+  --d-font-size-700:     var(--size-24);   /*   1.5 rem    */  --d-line-height-700:   var(--size-32);   /*   1.875 rem  */
+  --d-font-size-600:     var(--size-20);   /*   1.25 rem   */  --d-line-height-600:   var(--size-24);   /*   1.5 rem    */
+  --d-font-size-500:     var(--size-18);   /*   1.125 rem  */  --d-line-height-500:   var(--size-20);   /*   1.25 rem   */
+  --d-font-size-400:     var(--size-16);   /*   1 rem      */  --d-line-height-400:   var(--size-18);   /*   1.125 rem  */
+  --d-font-size-300:     var(--size-14);   /*   0.875 rem  */  --d-line-height-300:   var(--size-16);   /*   1 rem      */
+  --d-font-size-200:     var(--size-12);   /*   0.75 rem   */  --d-line-height-200:   var(--size-14);   /*   0.875 rem  */
+  --d-font-size-100:     var(--size-10);   /*   0.625 rem  */  --d-line-height-100:   var(--size-12);   /*   0.75 rem   */
+}

@@ -1,1 +1,92 @@
-/* You can add global styles to this file, and also import other style files */
+html{
+  overflow-x: hidden;
+  &:focus-within{ scroll-behavior: smooth; }
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: rgba(245, 245, 245, 1);
+    border-left: 1px solid rgba(215, 214, 211, 1);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(230, 126, 34, 1);
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(215, 115, 26, 1);
+  }
+}
+app-root{
+  display: grid;
+  grid-template-columns: 275px 1fr;
+  grid-template-rows: 72px 1fr;
+  grid-template-areas:
+      "aside header"
+      "aside main";
+  transition: .3s;
+  min-height: 100vh;
+  &.aside-collapse{ grid-template-columns: 75px 1fr; }
+}
+
+structure-aside{ grid-area: aside; }
+
+@import "assets/styles/core/index";
+@import "assets/styles/resets/resets";
+
+$light-theme: (
+  primary: rgba(52, 152, 220, 1),
+  primary-dark: darken(#3498db, 15%),
+  primary-light: lighten(#3498db, 15%),
+  background: #ffffff,
+  text: #333333
+);
+
+$dark-theme: (
+  primary: #2980b9,
+  primary-dark: darken(#2980b9, 15%),
+  primary-light: lighten(#2980b9, 15%),
+  background: #1e1e1e,
+  text: #f5f5f5
+);
+
+
+@function theme-color($key) { @return map-get($current-theme, $key); }
+$current-theme: $dark-theme;
+
+
+:root {
+  --primary: #{theme-color(primary)};
+  --primary-dark: #{theme-color(primary-dark)};
+  --primary-light: #{theme-color(primary-light)};
+  --background: #{theme-color(background)};
+  --text: #{theme-color(text)};
+}
+
+
+@mixin theme-styles {
+  background-color: var(--background);
+  color: var(--text);
+}
+
+body { @include theme-styles; }
+
+.button {
+  background-color: var(--primary);
+  &:hover { background-color: var(--primary-dark); }
+}
+
+body.dark-theme {
+  --primary: #{map-get($dark-theme, primary)};
+  --primary-dark: #{map-get($dark-theme, primary-dark)};
+  --primary-light: #{map-get($dark-theme, primary-light)};
+  --background: #{map-get($dark-theme, background)};
+  --text: #{map-get($dark-theme, text)};
+}
+
+body.light-theme {
+  --primary: #{map-get($light-theme, primary)};
+  --primary-dark: #{map-get($light-theme, primary-dark)};
+  --primary-light: #{map-get($light-theme, primary-light)};
+  --background: #{map-get($light-theme, background)};
+  --text: #{map-get($light-theme, text)};
+}

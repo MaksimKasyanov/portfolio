@@ -30,7 +30,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/highlight.js/styles/github-dark.css"
             ],
             "scripts": [],
             "server": "src/main.server.ts",
@@ -104,6 +105,11 @@
     },
     "library": {
       "projectType": "library",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "root": "projects/library",
       "sourceRoot": "projects/library/src",
       "prefix": "lib",

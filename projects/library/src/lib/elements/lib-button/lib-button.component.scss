@@ -1,0 +1,434 @@
+// use @use to import staff here
+
+@mixin buttonSize($padding, $font-size, $line-height) {
+  --vc-button-padding: #{$padding};
+  --vc-button-fs: #{$font-size};
+  --vc-button-lh: #{$line-height};
+}
+
+:host {
+  &.huge { @include buttonSize(var(--spacing-huge), 1rem, 1.375rem); }
+  &.large { @include buttonSize(var(--spacing-large), 1rem, 1.375rem); }
+  &.medium { @include buttonSize(var(--spacing-medium), 0.875rem, 1.125rem); }
+  &.small { @include buttonSize(var(--spacing-small), 0.75rem, 1rem); }
+  &.block { width: 100%; }
+  display: inline-block;
+
+}
+
+:host {
+  &.primary {
+    &.solid{
+      --vc-button-text: var(--d-color-neutral-000);
+      --vc-button-text-hover: var(--d-color-neutral-000);
+      --vc-button-text-active: var(--d-color-neutral-000);
+      --vc-button-text-disabled: var(--d-color-neutral-000);
+
+      --vc-button-background: var(--d-color-orange-400);
+      --vc-button-background-hover: var(--d-color-orange-300);
+      --vc-button-background-active: var(--d-color-orange-600);
+      --vc-button-background-focused: var(--d-color-orange-300);
+      --vc-button-background-disabled: var(--d-color-orange-200);
+
+      --vc-button-border: var(--d-border-primary);
+      --vc-button-border-hover: var(--d-border-primary-hover);
+      --vc-button-border-active: var(--d-border-primary-active);
+      --vc-button-border-focused: var(--d-border-primary-focused);
+      --vc-button-border-disabled: var(--d-border-primary-hdn);
+
+      --vc-button-shadow: var(--d-shadow-primary-out-hdn);
+      --vc-button-shadow-hover: var(--d-shadow-primary-out-hdn);
+      --vc-button-shadow-active: var(--d-shadow-primary-out-hdn);
+      --vc-button-shadow-focused: var(--d-shadow-primary-out-lgt);
+      --vc-button-shadow-disabled: var(--d-shadow-primary-out-hdn);
+    }
+    &.outline{
+      --vc-button-text: var(--d-color-orange-400);
+      --vc-button-text-hover: var(--d-color-orange-400);
+      --vc-button-text-active: var(--d-color-orange-400);
+      --vc-button-text-disabled: var(--d-color-neutral-300);
+
+      --vc-button-background: var(--d-color-orange-000);
+      --vc-button-background-hover: var(--d-color-orange-100);
+      --vc-button-background-active: var(--d-color-orange-200);
+      --vc-button-background-focused: var(--d-color-orange-000);
+      --vc-button-background-disabled: var(--d-color-orange-000);
+
+      --vc-button-border: var(--d-border-primary);
+      --vc-button-border-hover: var(--d-border-primary);
+      --vc-button-border-active: var(--d-border-primary);
+      --vc-button-border-focused: var(--d-border-primary);
+      --vc-button-border-disabled: var(--d-border-secondary-disabled);
+
+      --vc-button-shadow: var(--d-shadow-primary-out-hdn);
+      --vc-button-shadow-hover: var(--d-shadow-primary-out-hdn);
+      --vc-button-shadow-active: var(--d-shadow-primary-out-hdn);
+      --vc-button-shadow-focused: var(--d-shadow-primary-out-lgt);
+      --vc-button-shadow-disabled: var(--d-shadow-primary-out-hdn);
+
+      --vc-button-underscore: var(--d-shadow-primary-out-hdn);
+      --vc-button-underscore-hover: var(--d-shadow-primary-out-lgt);
+    }
+    &.unit{
+      --vc-button-text: var(--d-color-neutral-700);
+      --vc-button-text-hover: var(--d-color-neutral-700);
+      --vc-button-text-active: var(--d-color-neutral-700);
+      --vc-button-text-disabled: var(--d-color-neutral-300);
+
+      --vc-button-background: var(--d-color-neutral-000);
+      --vc-button-background-hover: var(--d-color-orange-100);
+      --vc-button-background-active: var(--d-color-orange-000);
+      --vc-button-background-focused: var(--d-color-orange-200);
+      --vc-button-background-disabled: var(--d-color-orange-000);
+
+      --vc-button-border: var(--d-border-primary-hdn);
+      --vc-button-border-hover: var(--d-border-primary-hdn);
+      --vc-button-border-active: var(--d-border-secondary-black);
+      --vc-button-border-focused: var(--d-border-secondary-black);
+
+      --vc-button-padding: var(--size-4) var(--size-12);
+    }
+    &.plain{
+      --vc-button-text: var(--d-color-orange-400);
+      --vc-button-text-hover: var(--d-color-orange-300);
+      --vc-button-text-active: var(--d-color-orange-400);
+      --vc-button-text-disabled: var(--d-color-neutral-300);
+
+      --vc-button-underscore: var(--d-color-primary-transparent);
+      --vc-button-underscore-hover: var(--d-color-orange-300);
+      --vc-button-padding: 0;
+      --vc-button-display: inline;
+    }
+  }
+  &.danger {
+    &.solid{
+      --vc-button-text: var(--d-color-neutral-000);
+      --vc-button-text-hover: var(--d-color-neutral-000);
+      --vc-button-text-active: var(--d-color-neutral-000);
+      --vc-button-text-disabled: var(--d-color-neutral-000);
+
+      --vc-button-background: var(--d-color-red-400);
+      --vc-button-background-hover: var(--d-color-red-300);
+      --vc-button-background-active: var(--d-color-red-600);
+      --vc-button-background-focused: var(--d-color-red-300);
+      --vc-button-background-disabled: var(--d-color-red-200);
+
+      --vc-button-border: var(--d-border-danger);
+      --vc-button-border-hover: var(--d-border-danger-active);
+      --vc-button-border-active: var(--d-border-danger-active);
+      --vc-button-border-focused: var(--d-border-danger-active);
+      --vc-button-border-disabled: var(--d-border-danger-hdn);
+
+      --vc-button-shadow: var(--d-shadow-danger-out-hdn);
+      --vc-button-shadow-hover: var(--d-shadow-danger-out-hdn);
+      --vc-button-shadow-active: var(--d-shadow-danger-out-hdn);
+      --vc-button-shadow-focused: var(--d-shadow-danger-out-lgt);
+      --vc-button-shadow-disabled: var(--d-shadow-danger-out-hdn);
+    }
+    &.outline{
+      --vc-button-text: var(--d-color-red-400);
+      --vc-button-text-hover: var(--d-color-red-400);
+      --vc-button-text-active: var(--d-color-red-400);
+      --vc-button-text-disabled: var(--d-color-neutral-300);
+
+      --vc-button-background: var(--d-color-red-000);
+      --vc-button-background-hover: var(--d-color-red-100);
+      --vc-button-background-active: var(--d-color-red-200);
+      --vc-button-background-focused: var(--d-color-red-000);
+      --vc-button-background-disabled: var(--d-color-red-000);
+
+      --vc-button-border: var(--d-border-danger);
+      --vc-button-border-hover: var(--d-border-danger);
+      --vc-button-border-active: var(--d-border-danger);
+      --vc-button-border-focused: var(--d-border-danger);
+      --vc-button-border-disabled: var(--d-border-secondary-disabled);
+
+      --vc-button-shadow: var(--d-shadow-danger-out-hdn);
+      --vc-button-shadow-hover: var(--d-shadow-danger-out-hdn);
+      --vc-button-shadow-active: var(--d-shadow-danger-out-hdn);
+      --vc-button-shadow-focused: var(--d-shadow-danger-out-lgt);
+      --vc-button-shadow-disabled: var(--d-shadow-danger-out-hdn);
+
+      --vc-button-underscore: var(--d-shadow-danger-out-hdn);
+      --vc-button-underscore-hover: var(--d-shadow-danger-out-lgt);
+    }
+    &.unit{
+      --vc-button-text: var(--d-color-neutral-700);
+      --vc-button-text-hover: var(--d-color-neutral-700);
+      --vc-button-text-active: var(--d-color-neutral-700);
+      --vc-button-text-disabled: var(--d-color-neutral-300);
+
+      --vc-button-background: var(--d-color-neutral-000);
+      --vc-button-background-hover: var(--d-color-red-100);
+      --vc-button-background-active: var(--d-color-red-000);
+      --vc-button-background-focused: var(--d-color-red-200);
+      --vc-button-background-disabled: var(--d-color-red-000);
+
+      --vc-button-border: var(--d-border-secondary-hdn);
+      --vc-button-border-hover: var(--d-border-secondary-hdn);
+      --vc-button-border-active: var(--d-border-danger);
+      --vc-button-border-focused: var(--d-border-danger);
+
+      --vc-button-padding: var(--size-4) var(--size-12);
+    }
+    &.plain{
+      --vc-button-text: var(--d-color-red-400);
+      --vc-button-text-hover: var(--d-color-red-300);
+      --vc-button-text-active: var(--d-color-red-400);
+      --vc-button-text-disabled: var(--d-color-neutral-300);
+
+      --vc-button-underscore: var(--d-color-danger-transparent);
+      --vc-button-underscore-hover: var(--d-color-red-300);
+      --vc-button-padding: 0;
+      --vc-button-display: inline;
+    }
+  }
+  &.success {
+    &.solid{
+      --vc-button-text: var(--d-color-neutral-000);
+      --vc-button-text-hover: var(--d-color-neutral-000);
+      --vc-button-text-active: var(--d-color-neutral-000);
+      --vc-button-text-disabled: var(--d-color-neutral-000);
+
+      --vc-button-background: var(--d-color-green-500);
+      --vc-button-background-hover: var(--d-color-green-400);
+      --vc-button-background-active: var(--d-color-green-600);
+      --vc-button-background-focused: var(--d-color-green-400);
+      --vc-button-background-disabled: var(--d-color-green-200);
+
+      --vc-button-border: var(--d-border-success);
+      --vc-button-border-hover: var(--d-border-success-hover);
+      --vc-button-border-active: var(--d-border-success-active);
+      --vc-button-border-focused: var(--d-border-success-active);
+      --vc-button-border-disabled: var(--d-border-success-hdn);
+
+      --vc-button-shadow: var(--d-shadow-success-out-hdn);
+      --vc-button-shadow-hover: var(--d-shadow-success-out-hdn);
+      --vc-button-shadow-active: var(--d-shadow-success-out-hdn);
+      --vc-button-shadow-focused: var(--d-shadow-success-out-lgt);
+      --vc-button-shadow-disabled: var(--d-shadow-success-out-hdn);
+    }
+    &.outline{
+      --vc-button-text: var(--d-color-green-400);
+      --vc-button-text-hover: var(--d-color-green-400);
+      --vc-button-text-active: var(--d-color-green-400);
+      --vc-button-text-disabled: var(--d-color-neutral-300);
+
+      --vc-button-background: var(--d-color-green-000);
+      --vc-button-background-hover: var(--d-color-green-100);
+      --vc-button-background-active: var(--d-color-green-200);
+      --vc-button-background-focused: var(--d-color-green-000);
+      --vc-button-background-disabled: var(--d-color-green-000);
+
+      --vc-button-border: var(--d-border-success);
+      --vc-button-border-hover: var(--d-border-success);
+      --vc-button-border-active: var(--d-border-success);
+      --vc-button-border-focused: var(--d-border-success);
+      --vc-button-border-disabled: var(--d-border-secondary-disabled);
+
+      --vc-button-shadow: var(--d-shadow-success-out-hdn);
+      --vc-button-shadow-hover: var(--d-shadow-success-out-hdn);
+      --vc-button-shadow-active: var(--d-shadow-success-out-hdn);
+      --vc-button-shadow-focused: var(--d-shadow-success-out-lgt);
+      --vc-button-shadow-disabled: var(--d-shadow-success-out-hdn);
+
+      --vc-button-underscore: var(--d-shadow-success-out-hdn);
+      --vc-button-underscore-hover: var(--d-shadow-success-out-lgt);
+    }
+    &.unit{
+      --vc-button-text: var(--d-color-neutral-700);
+      --vc-button-text-hover: var(--d-color-neutral-700);
+      --vc-button-text-active: var(--d-color-neutral-700);
+      --vc-button-text-disabled: var(--d-color-neutral-300);
+
+      --vc-button-background: var(--d-color-neutral-000);
+      --vc-button-background-hover: var(--d-color-green-100);
+      --vc-button-background-active: var(--d-color-green-000);
+      --vc-button-background-focused: var(--d-color-green-200);
+      --vc-button-background-disabled: var(--d-color-green-000);
+
+      --vc-button-border: var(--d-border-success-hdn);
+      --vc-button-border-hover: var(--d-border-success-hdn);
+      --vc-button-border-active: var(--d-border-success);
+      --vc-button-border-focused: var(--d-border-success);
+
+      --vc-button-padding: var(--size-4) var(--size-12);
+    }
+    &.plain{
+      --vc-button-text: var(--d-color-green-400);
+      --vc-button-text-hover: var(--d-color-green-300);
+      --vc-button-text-active: var(--d-color-green-400);
+      --vc-button-text-disabled: var(--d-color-neutral-300);
+
+      --vc-button-underscore: var(--d-color-success-transparent);
+      --vc-button-underscore-hover: var(--d-color-green-300);
+      --vc-button-padding: 0;
+      --vc-button-display: inline;
+    }
+  }
+  &.secondary {
+    &.solid{
+      --vc-button-text: var(--d-color-neutral-700);
+      --vc-button-text-hover: var(--d-color-neutral-400);
+      --vc-button-text-active: var(--d-color-neutral-400);
+      --vc-button-text-disabled: var(--d-color-neutral-300);
+
+      --vc-button-background: var(--d-color-neutral-100);
+      --vc-button-background-hover: var(--d-color-neutral-100);
+      --vc-button-background-active: var(--d-color-neutral-100);
+      --vc-button-background-focused: var(--d-color-neutral-100);
+      --vc-button-background-disabled: var(--d-color-neutral-100);
+
+      --vc-button-border: var(--d-border-secondary);
+      --vc-button-border-hover: var(--d-border-secondary-hover);
+      --vc-button-border-active: var(--d-border-secondary-hover);
+      --vc-button-border-focused: var(--d-border-secondary-hover);
+      --vc-button-border-disabled: var(--d-border-secondary-dis);
+
+      --vc-button-shadow: var(--d-shadow-primary-out-hdn);
+      --vc-button-shadow-hover: var(--d-shadow-primary-out-hdn);
+      --vc-button-shadow-active: var(--d-shadow-primary-out-hdn);
+      --vc-button-shadow-focused: var(--d-shadow-primary-out-lgt);
+      --vc-button-shadow-disabled: var(--d-shadow-primary-out-hdn);
+    }
+    &.outline{
+      --vc-button-text: var(--d-color-neutral-700);
+      --vc-button-text-hover: var(--d-color-neutral-700);
+      --vc-button-text-active: var(--d-color-neutral-700);
+      --vc-button-text-disabled: var(--d-color-neutral-700);
+
+      --vc-button-background: var(--d-color-neutral-000);
+      --vc-button-background-hover: var(--d-color-neutral-000);
+      --vc-button-background-active: var(--d-color-neutral-000);
+      --vc-button-background-focused: var(--d-color-neutral-000);
+      --vc-button-background-disabled: var(--d-color-neutral-000);
+
+      --vc-button-border: var(--d-border-secondary);
+      --vc-button-border-hover: var(--d-border-secondary-hover);
+      --vc-button-border-active: var(--d-border-secondary-hover);
+      --vc-button-border-focused: var(--d-border-secondary-hover);
+      --vc-button-border-disabled: var(--d-border-secondary-dis);
+
+      --vc-button-shadow: var(--d-shadow-primary-out-hdn);
+      --vc-button-shadow-hover: var(--d-shadow-primary-out-hdn);
+      --vc-button-shadow-active: var(--d-shadow-primary-out-hdn);
+      --vc-button-shadow-focused: var(--d-shadow-primary-out-lgt);
+      --vc-button-shadow-disabled: var(--d-shadow-primary-out-hdn);
+
+      --vc-button-underscore: var(--d-shadow-success-out-hdn);
+      --vc-button-underscore-hover: var(--d-shadow-success-out-lgt);
+    }
+    &.unit{
+      --vc-button-text: var(--d-color-neutral-700);
+      --vc-button-text-hover: var(--d-color-neutral-700);
+      --vc-button-text-active: var(--d-color-neutral-700);
+      --vc-button-text-disabled: var(--d-color-neutral-300);
+
+      --vc-button-background: var(--d-color-neutral-000);
+      --vc-button-background-hover: var(--d-color-neutral-100);
+      --vc-button-background-active: var(--d-color-neutral-000);
+      --vc-button-background-focused: var(--d-color-neutral-100);
+      --vc-button-background-disabled: var(--d-color-neutral-000);
+
+      --vc-button-border: var(--d-border-success-hdn);
+      --vc-button-border-hover: var(--d-border-success-hdn);
+      --vc-button-border-active: var(--d-border-secondary);
+      --vc-button-border-focused: var(--d-border-secondary);
+
+      --vc-button-padding: var(--size-4) var(--size-12);
+    }
+    &.plain{
+      --vc-button-text: var(--d-color-neutral-700);
+      --vc-button-text-hover: var(--d-color-neutral-400);
+      --vc-button-text-active: var(--d-color-neutral-700);
+      --vc-button-text-disabled: var(--d-color-neutral-300);
+
+      --vc-button-underscore: var(--d-color-neutral-black-transparent);
+      --vc-button-underscore-hover: var(--d-color-neutral-400);
+      --vc-button-padding: 0;
+      --vc-button-display: inline;
+    }
+  }
+}
+
+button {
+  position: relative;
+  display: var(--vc-button-display), flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-style: normal;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--vc-button-padding);
+  border-radius: var(--d-border-radius-1);
+  font-size: var(--vc-button-fs);
+  font-weight: 500 !important;
+  color: var(--vc-button-text);
+  background-color: var(--vc-button-background);
+  border: var(--vc-button-border);
+  box-shadow: var(--vc-button-shadow);
+  transition: .3s;
+  white-space: nowrap;
+  width: 100%;
+  &:hover {
+    background-color: var(--vc-button-background-hover);
+    border: var(--vc-button-border-hover);
+    box-shadow: var(--vc-button-shadow-hover);
+    color: var(--vc-button-text-hover);
+    &:before { background-color: var(--vc-button-underscore-hover); }
+  }
+
+  &:focus {
+    &:not(:active) {
+      background-color: var(--vc-button-background-focused);
+      border: var(--vc-button-border-focused);
+      box-shadow: var(--vc-button-shadow-focused);
+      color: var(--vc-button-text-active);
+    }
+    &:active { background-color: var(--vc-button-background-active); }
+    &:before { background-color: var(--vc-button-underscore-hover); }
+  }
+
+  &:active {
+    background-color: var(--vc-button-background-active);
+    border: var(--vc-button-border-active);
+    box-shadow: var(--vc-button-shadow-active);
+    color: var(--vc-button-text-active);
+    &:before { background-color: var(--vc-button-underscore); }
+  }
+
+  &:disabled {
+    color: var(--vc-button-text-disabled);
+    background-color: var(--vc-button-background-disabled);
+    box-shadow: var(--vc-button-shadow-disabled);
+    border: var(--vc-button-border-disabled);
+    cursor: default;
+
+    &:before { background-color: var(--d-color-neutral-white-transparent); }
+
+    &:hover, &:focus {
+      background-color: var(--vc-button-background-disabled);
+      box-shadow: var(--vc-button-shadow-disabled);
+      border: var(--vc-button-border-disabled);
+      color: var(--vc-button-text-disabled);
+    }
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: var(--size-1);
+    background-color: var(--vc-button-underscore);
+    transition: var(--d-transition-fast);
+  }
+
+}
+
+
+
+

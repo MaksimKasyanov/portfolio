@@ -1,0 +1,22 @@
+:root {
+  --d-shadow-secondary-inset:   var(--size-0)     var(--size-0)       var(--size-6)       var(--size-2)     rgba(27, 26, 25, 0.16) inset;
+  --d-shadow-secondary-out-blc: var(--size-0)     var(--size-0)       var(--size-0)       var(--size-2)     var(--d-color-neutral-black);
+  --d-shadow-secondary-out-drk: var(--size-0)     var(--size-6)       var(--size-16)      var(--size-2)     rgba(27, 26, 25, 0.16);
+  --d-shadow-secondary-out-lgt: var(--size-0)     var(--size-6)       var(--size-16)      var(--size-2)     rgba(27, 26, 25, 0.06);
+  --d-shadow-secondary-out-hdn: var(--size-0)     var(--size-0)       var(--size-0)       var(--size-2)     var(--d-color-neutral-white-transparent);
+
+  --d-shadow-primary-inset:     var(--size-0)     var(--size-0)       var(--size-6)       var(--size-2)     var(--d-color-primary-outline) inset;
+  --d-shadow-primary-out-drk:   var(--size-0)     var(--size-0)       var(--size-0)       var(--size-2)     var(--d-color-primary);
+  --d-shadow-primary-out-lgt:   var(--size-0)     var(--size-0)       var(--size-0)       var(--size-2)     var(--d-color-primary-disabled);
+  --d-shadow-primary-out-hdn:   var(--size-0)     var(--size-0)       var(--size-0)       var(--size-0)     var(--d-color-primary-transparent);
+
+  --d-shadow-danger-inset:      var(--size-0)     var(--size-0)       var(--size-6)       var(--size-2)     var(--d-color-danger-outline) inset;
+  --d-shadow-danger-out-drk:    var(--size-0)     var(--size-0)       var(--size-0)       var(--size-2)     var(--d-color-danger);
+  --d-shadow-danger-out-lgt:    var(--size-0)     var(--size-0)       var(--size-0)       var(--size-2)     var(--d-color-danger-disabled);
+  --d-shadow-danger-out-hdn:    var(--size-0)     var(--size-0)       var(--size-0)       var(--size-0)     var(--d-color-danger-transparent);
+
+  --d-shadow-success-inset:     var(--size-0)     var(--size-0)       var(--size-6)       var(--size-2)     var(--d-color-success-outline) inset;
+  --d-shadow-success-out-drk:   var(--size-0)     var(--size-0)       var(--size-0)       var(--size-2)     var(--d-color-success);
+  --d-shadow-success-out-lgt:   var(--size-0)     var(--size-0)       var(--size-0)       var(--size-2)     var(--d-color-success-outline);
+  --d-shadow-success-out-hdn:   var(--size-0)     var(--size-0)       var(--size-0)       var(--size-0)     var(--d-color-success-transparent);
+}

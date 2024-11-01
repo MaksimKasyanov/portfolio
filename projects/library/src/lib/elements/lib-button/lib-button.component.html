@@ -1,0 +1,5 @@
+<button data-id="testId" [attr.disabled]="disabled ? true : null">
+  <ng-container *ngIf="!loading">
+    <ng-content></ng-content>
+  </ng-container>
+</button>

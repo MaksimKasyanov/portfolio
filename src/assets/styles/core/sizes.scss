@@ -1,0 +1,15 @@
+@mixin generate-sizes($start, $end) {
+  @for $i from $start through $end {
+    --size-#{$i}: calc(var(--size) * #{$i});
+  }
+}
+
+:root {
+  --size: 0.0625rem;
+
+  @include generate-sizes(1, 320);
+  --size-0: 0;
+  --size-1136px: calc(var(--size) * 1136);
+  --size-1320px: calc(var(--size) * 1320);
+  --size-block: 100%;
+}
